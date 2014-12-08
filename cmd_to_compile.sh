@@ -15,27 +15,4 @@ src/tabtab.vala \
 
 #src/toolbar.vala \
 
-#Optional! Add:
-#-X -lm -X -l -X csfml-graphics -X -l -X csfml-window -X -l -X csfml-system -X -l -X csfml-audio -g -X -fsanitize=address -o nilts
-#above for debugging!
-
-#2)
-#clang -c \
-#src/main.c \
-#src/consts.c \
-#-I/usr/include/glib-2.0
-# -Ilibraries/CSFML-2.1/include -Ilibraries/gee/include -Ilibraries/glib2/include
-
-#3)
-#gcc -o leon \
-#main.o \
-#consts.o \
-#-lgee-1.0 -lgobject-2.0 -lglib-2.0 -lm
-
-#NOT NEEDED AT THE MOMENT:
-#-LCSFML-2.1/lib/gcc
-
 echo "Build complete, but not necessarily successful."
-
-#4)
-#rm *.o
