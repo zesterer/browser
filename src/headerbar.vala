@@ -26,6 +26,10 @@ class HeaderBar : Gtk.HeaderBar
 		this.entrybar = new EntryBar(this.root, this);
 		this.set_custom_title(this.entrybar);
 		
+		this.size_allocate.connect(()=> {
+		// let gtk do the drawing, dont force two.
+		this.entrybar.queue_resize_no_redraw(); });
+		
 		this.show_all();
 	}
 }
