@@ -1,12 +1,12 @@
 class EntryBar : Gtk.Box
 {
-	public Application root;
+	public Window root;
 	public HeaderBar mother;
 	
 	public Gtk.Button infobutton;
 	public Gtk.Entry entry;
 	
-	public EntryBar(Application root, HeaderBar mother)
+	public EntryBar(Window root, HeaderBar mother)
 	{
 		this.root = root;
 		this.mother = mother;
@@ -19,7 +19,7 @@ class EntryBar : Gtk.Box
 		this.add(this.infobutton);
 		this.infobutton.show();
 		
-		this.entry = new Entry(this.root, this);
+		this.entry = new Gtk.Entry();
 		this.entry.set_vexpand(true);
 		this.entry.set_valign(Gtk.Align.FILL);
 		this.entry.set_hexpand(true);
@@ -48,25 +48,6 @@ class EntryBar : Gtk.Box
 		{
 			nat = 868;
 		}
-	}
-}
-
-class Entry : Gtk.Entry
-{
-	public Application root;
-	public EntryBar mother;
-	
-	public Entry(Application root, EntryBar mother)
-	{
-		this.root = root;
-		this.mother = mother;
-		
-		//this.margin = 2;
-		
-		//this.mother.natural_width = 1500;
-		//this.set_size_request(1000, 32);
-		
-		this.show_all();
 	}
 }
 

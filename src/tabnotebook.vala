@@ -1,17 +1,18 @@
 class TabNotebook : Gtk.Notebook
 {
-	public Application root;
+	public Window root;
 	public Window mother;
 	
 	public Gee.ArrayList<TabBox> tablist;
 	public Gtk.Button newtabbutton;
 	
-	public TabNotebook(Application root, Window mother)
+	public TabNotebook(Window root, Window mother)
 	{
 		this.root = root;
 		this.mother = mother;
 		
 		this.set_scrollable(true);
+		this.switch_page.connect(this.update);
 		
 		this.tablist = new Gee.ArrayList<TabBox>();
 		this.addTab();
@@ -40,5 +41,11 @@ class TabNotebook : Gtk.Notebook
 	public void newTab(Gtk.Button button)
 	{
 		this.addTab();
+	}
+	
+	public void update(Gtk.Widget tabbox, uint num)
+	{
+		TabBox tb = (TabBox)this.get_nth_page((int)num);
+		tb.update();
 	}
 }

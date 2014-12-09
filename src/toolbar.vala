@@ -1,12 +1,12 @@
 class Toolbar : Gtk.Toolbar
 {
-	public Application root;
+	public Window root;
 	public Window mother;
 	
 	public Gtk.ToolItem entryitem;
 	public EntryBar entrybar;
 	
-	public Toolbar(Application root, Window mother)
+	public Toolbar(Window root, Window mother)
 	{
 		this.root = root;
 		this.mother = mother;

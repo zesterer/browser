@@ -1,13 +1,13 @@
 class TabTab : Gtk.Box
 {
-	public Application root;
+	public Window root;
 	public TabBox mother;
 	
 	public Gtk.Image image;
 	public Gtk.Label label;
 	public Gtk.Button closebutton;
 	
-	public TabTab(Application root, TabBox mother)
+	public TabTab(Window root, TabBox mother)
 	{
 		//this.set_orientation(Gtk.Orientation.HORIZONTAL);
 		this.root = root;

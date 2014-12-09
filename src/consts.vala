@@ -9,4 +9,9 @@ namespace Consts
 	public const int min_height = 400;
 	
 	public const bool debug = true;
+	
+	public void output(string message)
+	{
+		stdout.printf(message + "\n");
+	}
 }

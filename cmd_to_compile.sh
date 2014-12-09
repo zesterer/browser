@@ -12,6 +12,7 @@ src/configbar.vala \
 src/tabnotebook.vala \
 src/tabbox.vala \
 src/tabtab.vala \
+src/events.vala \
 
 #src/toolbar.vala \
 

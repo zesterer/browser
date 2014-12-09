@@ -1,6 +1,6 @@
 class TabBox : Gtk.Box
 {
-	public Application root;
+	public Window root;
 	public TabNotebook mother;
 	
 	public Gtk.ScrolledWindow scrolledwindow;
@@ -8,14 +8,14 @@ class TabBox : Gtk.Box
 	
 	public TabTab tabtab;
 	
-	public int page_number;
+	//public int page_number;
 	
-	public TabBox(Application root, TabNotebook mother)
+	public TabBox(Window root, TabNotebook mother)
 	{
 		this.root = root;
 		this.mother = mother;
 		
-		this.page_number = page_number;
+		//this.page_number = page_number;
 		this.tabtab = new TabTab(this.root, this);
 		
 		this.set_hexpand(true);
@@ -28,6 +28,7 @@ class TabBox : Gtk.Box
 		
 		this.webview = new WebKit.WebView();
 		this.webview.load_uri("http://www.google.com/");
+		this.webview.load_changed.connect(this.update);
 		this.scrolledwindow.add(this.webview);
 		
 		this.show_all();
@@ -36,5 +37,30 @@ class TabBox : Gtk.Box
 	public void close (Gtk.Button button)
 	{
 		this.mother.remove_page(this.mother.page_num(this));
+	}
+	
+	public void update()
+	{
+		if (this.mother.get_current_page() == this.mother.page_num(this))
+		{
+			this.root.headerbar.navbar.back.set_sensitive(this.webview.can_go_back());
+			this.root.headerbar.navbar.forward.set_sensitive(this.webview.can_go_forward());
+		}
+	}
+	
+	public void goBack()
+	{	
+		if (this.webview.can_go_back())
+			this.webview.go_back();
+		
+		this.update();
+	}
+	
+	public void goForward()
+	{	
+		if (this.webview.can_go_forward())
+			this.webview.go_forward();
+		
+		this.update();
 	}
 }

@@ -1,12 +1,12 @@
 class ConfigBar : Gtk.Box
 {
-	public Application root;
+	public Window root;
 	public HeaderBar mother;
 	
 	public Gtk.Button bookmark;
 	public Gtk.Button menu;
 	
-	public ConfigBar(Application root, HeaderBar mother)
+	public ConfigBar(Window root, HeaderBar mother)
 	{
 		this.root = root;
 		this.mother = mother;

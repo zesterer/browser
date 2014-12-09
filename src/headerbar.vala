@@ -1,6 +1,6 @@
 class HeaderBar : Gtk.HeaderBar
 {
-	public Application root;
+	public Window root;
 	public Window mother;
 	
 	public NavBar navbar;
@@ -8,7 +8,7 @@ class HeaderBar : Gtk.HeaderBar
 	
 	public EntryBar entrybar;
 	
-	public HeaderBar(Application root, Window mother)
+	public HeaderBar(Window root, Window mother)
 	{
 		this.root = root;
 		this.mother = mother;
