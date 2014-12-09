@@ -1,7 +1,7 @@
 Leon
 ====
 
-This is Leon, the (soon to be) default Evolve OS browser.
+This is Leon, the (hopefully soon to be) default Evolve OS browser. If Ikey agrees to adopt it.
 
 ## FAQ
 
