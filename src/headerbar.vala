@@ -6,7 +6,7 @@ class HeaderBar : Gtk.HeaderBar
 	public NavBar navbar;
 	public ConfigBar configbar;
 	
-	public Entry entrybar;
+	public EntryBar entrybar;
 	
 	public HeaderBar(Application root, Window mother)
 	{
@@ -23,7 +23,7 @@ class HeaderBar : Gtk.HeaderBar
 		this.configbar = new ConfigBar(this.root, this);
 		this.pack_end(this.configbar);
 		
-		this.entrybar = new Entry(this.root, this);
+		this.entrybar = new EntryBar(this.root, this);
 		this.set_custom_title(this.entrybar);
 		
 		this.show_all();
