@@ -13,6 +13,7 @@ src/tabnotebook.vala \
 src/tabbox.vala \
 src/tabtab.vala \
 src/events.vala \
+src/hamburger.vala \
 
 #src/toolbar.vala \
 

@@ -39,12 +39,19 @@ class TabBox : Gtk.Box
 		this.mother.remove_page(this.mother.page_num(this));
 	}
 	
-	public void update()
+	public void update(WebKit.LoadEvent load_event = WebKit.LoadEvent.FINISHED)
 	{
-		if (this.mother.get_current_page() == this.mother.page_num(this))
+		if (this.mother.get_current_page() == this.mother.page_num(this) && (load_event == WebKit.LoadEvent.FINISHED || load_event == WebKit.LoadEvent.COMMITTED))
 		{
+			//Back and forward button greying
 			this.root.headerbar.navbar.back.set_sensitive(this.webview.can_go_back());
 			this.root.headerbar.navbar.forward.set_sensitive(this.webview.can_go_forward());
+			
+			//The URL bar
+			this.root.headerbar.entrybar.entry.set_text(this.webview.uri);
+			
+			//The tab text
+			this.tabtab.label.set_text(this.webview.title);
 		}
 	}
 	
