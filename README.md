@@ -3,6 +3,8 @@ Leon
 
 This is Leon, the (hopefully soon to be) default Evolve OS browser. If Ikey agrees to adopt it.
 
+![alt tag](https://raw.githubusercontent.com/evolve-os/browser/master/git-stuff/Screenshot%20from%202015-01-07%2021:03:30.png)
+
 ## FAQ
 
 ### Why does Evolve OS need a new browser?
