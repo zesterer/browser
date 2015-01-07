@@ -17,11 +17,14 @@ class EntryBar : Gtk.Box
 		this.entry.set_placeholder_text("Search here...");
 		
 		this.entry.set_icon_from_icon_name(Gtk.EntryIconPosition.PRIMARY, "dialog-information-symbolic");
+		this.entry.set_icon_sensitive(Gtk.EntryIconPosition.PRIMARY, true);
+		this.entry.set_icon_activatable(Gtk.EntryIconPosition.PRIMARY, true);
+		this.entry.set_icon_sensitive(Gtk.EntryIconPosition.SECONDARY, true);
 		this.entry.set_icon_from_icon_name(Gtk.EntryIconPosition.SECONDARY, "edit-find");
 		
 		this.add(this.entry);
 		
-		this.get_style_context().add_class("linked");
+		//this.get_style_context().add_class("linked");
 		
 		this.show_all();
 	}

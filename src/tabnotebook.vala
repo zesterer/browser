@@ -28,9 +28,9 @@ class TabNotebook : Gtk.Notebook
 		this.show_all();
 	}
 	
-	public TabBox addTab()
+	public TabBox addTab(string url = "http://www.google.com/")
 	{
-		TabBox tabbox = new TabBox(this.root, this);
+		TabBox tabbox = new TabBox(this.root, this, url);
 		this.tablist.add(tabbox);
 		this.append_page(tabbox, tabbox.tabtab);
 		this.set_current_page(this.page_num(tabbox));
@@ -43,9 +43,10 @@ class TabNotebook : Gtk.Notebook
 		this.addTab();
 	}
 	
-	public void update(Gtk.Widget tabbox, uint num)
+	public void update(Gtk.Widget page, uint num)
 	{
 		TabBox tb = (TabBox)this.get_nth_page((int)num);
+		//TabBox tb = (TabBox)this.get_current_page();
 		tb.update();
 	}
 }

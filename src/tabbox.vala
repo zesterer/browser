@@ -10,7 +10,7 @@ class TabBox : Gtk.Box
 	
 	//public int page_number;
 	
-	public TabBox(Window root, TabNotebook mother)
+	public TabBox(Window root, TabNotebook mother, string url)
 	{
 		this.root = root;
 		this.mother = mother;
@@ -27,7 +27,7 @@ class TabBox : Gtk.Box
 		this.add(this.scrolledwindow);
 		
 		this.webview = new WebKit.WebView();
-		this.webview.load_uri("http://www.google.com/");
+		this.webview.load_uri(url);
 		this.webview.load_changed.connect(this.update);
 		this.scrolledwindow.add(this.webview);
 		
@@ -36,7 +36,10 @@ class TabBox : Gtk.Box
 	
 	public void close (Gtk.Button button)
 	{
-		this.mother.remove_page(this.mother.page_num(this));
+		if (this.mother.get_n_pages() > 1)
+		{
+			this.mother.remove_page(this.mother.page_num(this));
+		}
 	}
 	
 	public void update(WebKit.LoadEvent load_event = WebKit.LoadEvent.FINISHED)
@@ -50,8 +53,22 @@ class TabBox : Gtk.Box
 			//The URL bar
 			this.root.headerbar.entrybar.entry.set_text(this.webview.uri);
 			
+			//The tab image
+			this.tabtab.image.set_from_surface((Cairo.Surface)this.webview.get_favicon());
+			
 			//The tab text
-			this.tabtab.label.set_text(this.webview.title);
+			string title = this.webview.title;
+			//The tooltip
+			this.tabtab.tooltip_text = title;
+			
+			//Shorten it if necessary
+			if (title.char_count() > 26)
+			{
+				title = title[0:17] + "...";
+			}
+			this.tabtab.label.set_text(title);
+			
+			//The tab overlay
 		}
 	}
 	
