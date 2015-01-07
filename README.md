@@ -42,4 +42,8 @@ And then to start the browser:
 Just make sure you have the correct libraries installed! (As of yet, I don't believe that Evolve OS includes a WebKit package, although this IS coming, don't 
 worry!)
 
+### Disclaimer
+
+Leon is undergoing HEAVY development. That means probably most of it will change a lot from now until it's release. If you have feature suggestions, please tell me. But I may already be planning them.
+
 ~ Barry Smith
