@@ -34,6 +34,7 @@ Sorry. It doesn't use make, autotools or cmake yet. I'll be honest - I'm too laz
 recompile it using the bash script included. To do this cd to the directory, and run:
 
 `sh cmd_to_compile.sh`
+`./leon`
 
 Just make sure you have the correct libraries installed! (As of yet, I don't believe that Evolve OS includes a WebKit package, although this IS coming, don't 
 worry!)
