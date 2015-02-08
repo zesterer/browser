@@ -3,12 +3,9 @@ Leon
 
 #DISCONTINUED UNTIL FURTHER NOTICE
 
-This is Leon, the (hopefully soon to be) default Evolve OS browser. If Ikey agrees to adopt it.
-=======
 This is Leon, the (hopefully) soon-to-be default Evolve OS browser. If Ikey agrees to adopt it.
 
 ![alt tag](https://raw.githubusercontent.com/evolve-os/browser/master/git-stuff/Screenshot%20from%202015-01-07%2021:03:30.png)
->>>>>>> 79ec13188cf5ab1c1277b5ba4246deafb96cbccd
 
 ## FAQ
 
