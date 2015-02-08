@@ -4,6 +4,11 @@ Leon
 #DISCONTINUED UNTIL FURTHER NOTICE
 
 This is Leon, the (hopefully soon to be) default Evolve OS browser. If Ikey agrees to adopt it.
+=======
+This is Leon, the (hopefully) soon-to-be default Evolve OS browser. If Ikey agrees to adopt it.
+
+![alt tag](https://raw.githubusercontent.com/evolve-os/browser/master/git-stuff/Screenshot%20from%202015-01-07%2021:03:30.png)
+>>>>>>> 79ec13188cf5ab1c1277b5ba4246deafb96cbccd
 
 ## FAQ
 
@@ -31,11 +36,19 @@ OS libraries and applications, so it's important that Evolve's web browser fits 
 ### How do I compile the thing?
 
 Sorry. It doesn't use make, autotools or cmake yet. I'll be honest - I'm too lazy. But this repository includes a x86_64 binary, and if you really want you can 
-recompile it using the bash script included. To do this cd to the directory, and run:
+recompile it using the bash script included.
 
+To do this cd to the directory, and run:
 `sh cmd_to_compile.sh`
+
+And then to start the browser:
+`./leon`
 
 Just make sure you have the correct libraries installed! (As of yet, I don't believe that Evolve OS includes a WebKit package, although this IS coming, don't 
 worry!)
+
+### Disclaimer
+
+Leon is undergoing HEAVY development. That means probably most of it will change a lot from now until it's release. If you have feature suggestions, please tell me. But I may already be planning them.
 
 ~ Barry Smith
