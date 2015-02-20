@@ -49,3 +49,7 @@ worry!)
 Leon is undergoing HEAVY development. That means probably most of it will change a lot from now until it's release. If you have feature suggestions, please tell me. But I may already be planning them.
 
 ~ Barry Smith
+
+
+I need this later:
+(?i)\b((?:[a-z][\w-]+:(?:/{1,3}|[a-z0-9%])|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'".,<>?«»“”‘’]))
